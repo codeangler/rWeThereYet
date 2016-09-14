@@ -29,3 +29,4 @@ continue to watch feed
 
 API Gateway endpoint:
 GET - https://ec13qraec0.execute-api.us-east-1.amazonaws.com/dev/trip/station
+GET - https://ec13qraec0.execute-api.us-east-1.amazonaws.com/dev/trip/station?lat=3&lon=234
