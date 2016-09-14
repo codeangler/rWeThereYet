@@ -1,7 +1,7 @@
 "# rWeThereYet"  git init git add README.md git commit -m "first commit" git remote add origin https://github.com/codeangler/rWeThereYet.git git push -u origin master
 
 ### MVP
-Geolate nearest stop and find feeds for buses approaching and return ETA.
+Geolocate nearest stop and find feeds for buses approaching and return ETA.
 
 #TODO: 1
 What's my station id
@@ -13,10 +13,10 @@ Nearest Station
 What buses are on route
 
 #TODO: 3.2
-  Subscribe bus rourte
+Subscribe bus route
 
 #TODO: 4  add destination
-  continue to watch feed 
+continue to watch feed 
 
   ### TODO: 4.2  rWeThere yet
 
@@ -26,3 +26,6 @@ What buses are on route
 
 
   ### stretch...  there are three buses on this route, which is coming next
+
+API Gateway endpoint:
+GET - https://ec13qraec0.execute-api.us-east-1.amazonaws.com/dev/trip/station
