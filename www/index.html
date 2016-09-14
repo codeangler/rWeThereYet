@@ -11,17 +11,17 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-12 col-md-offset-3 col-md-6">
-                <a href="#" onclick=alert( 'yes') class="btn btn-danger">rWeThereYet</a>
+                <a href="#" onclick=alert( "yes") class="btn btn-danger">rWeThereYet</a>
             </div>
         </div>
         <div class="row">
             <div class="col-xs-12 col-md-offset-3 col-md-6">
                 <div class="form-group">
                     <label class="control-label">Your Current Stop</label>
-                    <form class="input-group" action="" id="target">
-                        <input type="text" class="form-control">
+                    <form class="input-group" action="">
+                        <input id="text" type="text" class="form-control">
                         <span class="input-group-btn">
-                           <button class="btn btn-default" type="submit" >Button</button>
+                           <button class="btn btn-default" type="button" id="text_value">Button</button>
                         </span>
                     </form>
                 </div>
@@ -38,12 +38,40 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     <script type="text/javascript">
-    $("#target").submit(function(event) {
-        alert("Handler for .submit() called.");
-        event.preventDefault();
+    $('#text_value').click(function() {
+        var text_value = $("#text").val();
+        if (text_value == '') {
+            alert("Enter Some Text In Input Field");
+        } else {
+            alert(text_value);
+        }
     });
+
+    $('#text_reset').click(function() {
+        $("#text").val('');
+    });
+
+    $(document).ready(function() {
+        if (navigator.geolocation) {
+            console.log('Geolocation is supported!');
+        } else {
+            console.log('Geolocation is not supported for this Browser/OS version yet.');
+        }
+        console.log("ready!");
+    });
+
+    window.onload = function() {
+        var startPos;
+        var geoSuccess = function(position) {
+            startPos = position;
+            document.getElementById('startLat').innerHTML = startPos.coords.latitude;
+            document.getElementById('startLon').innerHTML = startPos.coords.longitude;
+        };
+        console.log(startPos)
+        navigator.geolocation.getCurrentPosition(geoSuccess);
+    };
     </script>
 </body>
 
