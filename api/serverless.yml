@@ -47,6 +47,10 @@ provider:
 functions:
   hello:
     handler: handler.hello
+    events:
+     - http:
+         path: trip/station
+         method: get
 
 #    you can add any of the following events
 #    events:
