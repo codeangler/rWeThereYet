@@ -28,5 +28,8 @@ continue to watch feed
   ### stretch...  there are three buses on this route, which is coming next
 
 API Gateway endpoint:
-GET - https://ec13qraec0.execute-api.us-east-1.amazonaws.com/dev/trip/station
 GET - https://ec13qraec0.execute-api.us-east-1.amazonaws.com/dev/trip/station?lat=3&lon=234
+=======
+
+Preso:
+https://docs.google.com/presentation/d/1lJ5agGabfbjtZKgYhhBLpfAp1TeXj1U9B-i1rlUXc9E/edit?usp=sharing
