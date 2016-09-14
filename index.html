@@ -63,14 +63,9 @@
     });
 
     window.onload = function() {
-        var startPos;
-        var geoSuccess = function(position) {
-            startPos = position;
-            document.getElementById('startLat').innerHTML = startPos.coords.latitude;
-            document.getElementById('startLon').innerHTML = startPos.coords.longitude;
-        };
-        console.log(startPos)
-        navigator.geolocation.getCurrentPosition(geoSuccess);
+        navigator.geolocation.getCurrentPosition(function(position) {
+  console.log(position.coords.latitude, position.coords.longitude);
+});
     };
     </script>
 </body>
