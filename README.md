@@ -20,5 +20,9 @@ What buses are on route
 
   ### TODO: 4.2  rWeThere yet
 
+#TODO: 5  build front end
+  5.1 take user input trip id
+  5.2 take user GPS and pass late
+
 
   ### stretch...  there are three buses on this route, which is coming next
