@@ -9,7 +9,7 @@ module.exports.hello = (event, context, cb) => cb(null,
     query.on('row', function(row) {
       return { message: [row.stop_id], event };
     });
-  }
+  });
 );
 
 // You can add more handlers here, and reference them in serverless.yml
